@@ -1,7 +1,8 @@
 from django.conf.urls import url
+from django.urls import path, re_path
 from StockDashboardApp import views
 
 urlpatterns=[
-    url(r'^stocks$',views.stockApi),
-    url(r'^stocks/([0-9]+)$',views.stockApi)
+    # path('admin/', admin.site.urls),
+    re_path(r'^stocks/$', views.stockApi),
 ]
