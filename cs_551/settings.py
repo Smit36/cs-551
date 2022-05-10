@@ -39,10 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'StockDashboardApp.apps.StockdashboardappConfig'
+    'StockDashboardApp.apps.StockdashboardappConfig',
+    'firebase_auth'
 ]
 
 CORS_ORIGIN_ALLOW_ALL=True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,7 +86,7 @@ DATABASES = {
         'CLIENT':{
             "host":"mongodb://localhost:27017/",
             "name":"stock-dashboard",
-            
+
         }
     }
 }

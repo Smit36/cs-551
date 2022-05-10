@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from StockDashboardApp import Stocks
+from StockDashboardApp.models import Stocks
 
 class StockSerializer(serializers.ModelSerializer):
     class Meta:
