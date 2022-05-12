@@ -1,6 +1,8 @@
 
 from django.http.response import JsonResponse
 import yfinance as yf
+from StockDashboardApp.models import Stocks
+from StockDashboardApp.serializers import StockSerializer
 
 # Create your views here.
 #D10J66XZ7XGVJ5PZ
@@ -40,3 +42,11 @@ def stockApi(request,id=0):
             result.append(ticker_info)
        
         return JsonResponse(result,safe=False)
+
+def portfolioApi(request,id=0):
+    if request.method=='GET':
+        stocks=Stocks.objects.all()
+        stocks_serializer=StockSerializer(stocks,many=True)
+        return JsonResponse(stocks_serializer.data,safe=False)
+    
+        
