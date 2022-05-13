@@ -4,4 +4,4 @@ from StockDashboardApp.models import Stocks
 class StockSerializer(serializers.ModelSerializer):
     class Meta:
         model=Stocks
-        fields=('StockId','StockName','StockValue')
+        fields=('stockId','stockName','userId')
