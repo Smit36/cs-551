@@ -48,6 +48,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ]
 
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,7 +127,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_L10N = True
-
+SESSION_ENGINE = "django.contrib.sessions.backends.db"
 USE_TZ = True
 
 
