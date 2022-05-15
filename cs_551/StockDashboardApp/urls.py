@@ -4,8 +4,8 @@ from StockDashboardApp import views
 
 urlpatterns=[
     # path('admin/', admin.site.urls),
-    re_path(r'^stocks$', views.stockApi),
-    re_path(r'^stocks/crypto$', views.stockCryptoApi),
-    re_path(r'^portfolio$', views.portfolioApi),
+    path('stocks', views.stockApi),
+    path('portfolio', views.newPortfolio),
+    path('portfolio/<str:id>', views.portfolioApi),
     
 ]

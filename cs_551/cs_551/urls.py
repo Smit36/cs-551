@@ -20,5 +20,7 @@ from django.conf.urls import url,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^',include('StockDashboardApp.urls'))
+    url(r'^',include('StockDashboardApp.urls')),
+    url(r'^',include('firebase_auth.urls'))
+    
 ]
